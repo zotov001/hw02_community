@@ -3,6 +3,7 @@ from django.contrib import admin
 # Register your models here.
 from .models import Group, Post
 
+
 class PostAdmin(admin.ModelAdmin):
     list_display = (
         'pk',
@@ -14,7 +15,8 @@ class PostAdmin(admin.ModelAdmin):
     list_editable = ('group',)
     search_fields = ('text',)
     list_filter = ('pub_date',)
-    empty_value_display = '-пусто-' 
+    empty_value_display = '-пусто-'
+
 
 # При регистрации модели Post источником конфигурации для неё назначаем
 # класс PostAdmin
